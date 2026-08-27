@@ -2,16 +2,11 @@
 
 ## Project Overview
 
-This project is an end-to-end retail sales analytics solution developed using
-MySQL and Microsoft Power BI.
+This project is an end-to-end retail sales analytics solution developed using MySQL and Microsoft Power BI.
 
-The objective is to analyze retail sales performance and provide management
-with an interactive dashboard for monitoring revenue, transactions, product
-performance, category performance, and year-over-year trends.
+The objective is to analyze retail sales performance and provide management with an interactive dashboard for monitoring revenue, transactions, product performance, category performance, and year-over-year trends.
 
-> **Note:** This project uses synthetic retail data created for portfolio and
-> demonstration purposes. It does not contain confidential or proprietary
-> company information.
+> **Note:** This project uses synthetic retail data created for portfolio and demonstration purposes. It does not contain confidential or proprietary company information.
 
 ## Tools & Technologies
 
@@ -30,8 +25,7 @@ The source data was stored in a MySQL database (`roms_db`) containing:
 - Products
 - Sales
 
-The Sales table contains 200 synthetic retail sales transactions across
-2025 and 2026.
+The Sales table contains 200 synthetic retail sales transactions across 2025 and 2026.
 
 ## Data Preparation
 
@@ -51,8 +45,7 @@ The model uses one-to-many relationships:
 - Products (1) → (*) Sales
 - DateTable (1) → (*) Sales
 
-A dedicated DateTable was created in Power BI to support time-intelligence
-analysis.
+A dedicated DateTable was created in Power BI to support time-intelligence analysis.
 
 ![Data Model](Screenshots/data-model.png)
 
@@ -68,7 +61,7 @@ Key measures include:
 - Revenue YoY Difference
 - YoY Revenue Growth %
 
-For example, Total Revenue is calculated using an iterator:
+For example:
 
 `Total Revenue = SUMX(Sales, Sales[Quantity] * Sales[UnitPrice])`
 
@@ -124,5 +117,5 @@ Retail-Sales-PowerBI/
 - Screenshots/
   - dashboard.png
   - data-model.png
-- Retail-Sales-Dashboard.pbix
+- Retail-Sales-PowerBI.pbix
 - README.md
